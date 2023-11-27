@@ -1,0 +1,29 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "act"
+type = "cli"
+
+[platform.linux]
+download-file = "act_Linux_{arch}.tar.gz"
+bin-path = "act"
+
+[platform.macos]
+download-file = "act_Darwin_{arch}.tar.gz"
+bin-path = "act"
+
+[platform.windows]
+download-file = "act_Windows_{arch}.zip"
+bin-path = "act.exe"
+
+[install]
+download-url = "https://github.com/nektos/act/releases/download/v{version}/{download_file}"
+unpack = false
+
+[install.arch]
+aarch64 = "arm64"
+arm = "armv7"
+x86 = "i386"
+
+[resolve]
+git-url = "https://github.com/nektos/act"
