@@ -5,7 +5,7 @@ name = "terraform"
 type = "cli"
 
 [platform.linux]
-download-file = "terraform_{version}_linux_amd64.zip"
+download-file = "terraform_{version}_linux_{arch}.zip"
 bin-path = "terraform"
 checksum-file = "terraform_{version}_SHA256SUMS"
 
